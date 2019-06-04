@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>Homepage Headline</h1>
+        <p>This is a paragraph.</p>
+        <video id="video" controls width="1000px" ></video>
+    </body>
+<script>
+    navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
+        const video = document.getElementById('video');
+        video.srcObject = stream;
+        video.onloadedmetadata = (e)=>
+        {
+            video.play();
+        }
+    }).catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+</script>
+</html>
