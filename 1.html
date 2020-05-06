@@ -49,7 +49,7 @@ btn.onclick =function postshare() {
         }
       }
 ); 
-let getpost(){
+let getpost= ()=>{
 	FB.api('/me', 'GET', {"fields":"id,name,posts{description,link}"}, function(res){
 		console.log(res);
 	})
