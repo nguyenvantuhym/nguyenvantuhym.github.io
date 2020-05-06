@@ -14,15 +14,7 @@
       xfbml            : true,
       version          : 'v7.0'
     });
-	FB.api(
-  '/me',
-  'GET',
-  {"fields":"id,name"},
-  function(response) {
-	console.log(response);
-      // Insert your code here
-  }
-);
+};
 FB.login(function(response) {
     if (response.authResponse) {
      console.log('Welcome!  Fetching your information.... ');
@@ -33,9 +25,15 @@ FB.login(function(response) {
      console.log('User cancelled login or did not fully authorize.');
     }
 });
-
-
-};
+FB.api(
+  '/me',
+  'GET',
+  {"fields":"id,name"},
+  function(response) {
+	console.log(response);
+      // Insert your code here
+  }
+);
 let btn = document.getElementById('btn');
 btn.onclick = ()=>{
 	FB.api('/me', 'GET', {"fields":"id,name,posts{description,link}"}, function(res){
