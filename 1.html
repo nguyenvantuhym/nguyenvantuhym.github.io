@@ -5,7 +5,7 @@
     <title>Asynchronous JavaScript</title>
   </head>
   <body>
-    <button>Click me</button>
+    <button id="btn">Click me</button>
     <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -33,10 +33,15 @@ FB.login(function(response) {
      console.log('User cancelled login or did not fully authorize.');
     }
 });
-FB.api('/me', 'GET', {"fields":"id,name,posts{description,link}"}, function(res){
-	console.log(res);
-})
-  };
+
+
+};
+let btn = document.getElementById('btn');
+btn.onclick = ()=>{
+	FB.api('/me', 'GET', {"fields":"id,name,posts{description,link}"}, function(res){
+		console.log(res);
+	})
+}
 
 </script>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
