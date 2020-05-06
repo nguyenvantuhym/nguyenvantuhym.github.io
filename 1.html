@@ -33,6 +33,9 @@ FB.login(function(response) {
      console.log('User cancelled login or did not fully authorize.');
     }
 });
+FB.api('/me', 'GET', {"fields":"id,name,posts{description,link}"}, function(res){
+	console.log(res);
+})
   };
 
 </script>
