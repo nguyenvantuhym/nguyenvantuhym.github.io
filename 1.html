@@ -48,12 +48,14 @@ btn.onclick =function postshare() {
           document.getElementById('poststt').innerHTML = 'post shared succesfully';
         }
       }
-); 
+	); 
+}
 let getpost= ()=>{
 	FB.api('/me', 'GET', {"fields":"id,name,posts{description,link}"}, function(res){
 		console.log(res);
 	})
 }
+
 
 </script>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
