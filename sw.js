@@ -20,7 +20,6 @@ self.addEventListener('install', event => {
       './article.htm',
       './index.htm',
 		/* times2 */
-		offlineUrl
 		
     ])) 
   );
