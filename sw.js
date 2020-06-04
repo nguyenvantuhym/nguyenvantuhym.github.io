@@ -20,11 +20,8 @@ self.addEventListener('install', event => {
       './article.htm',
       './index.htm',
 		/* times2 */
-		offlineUrl,
-		'../../animation/demo/Bai 4_files/jump0.gif',
-		'../../animation/demo/Bai 4_files/jump1.gif',
-		'../../animation/demo/Bai 4_files/jump2.gif',
-		'../../animation/demo/Bai 4_files/jump3.gif'
+		offlineUrl
+		
     ])) 
   );
 });
