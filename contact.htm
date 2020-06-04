@@ -43,7 +43,7 @@
 		console.log(" no error");
             displayMessageNotification('Message queued');
             queueMessage();                                                 // 
-        });
+        }).catch(()=>console.log("failed"));
       });
     });
   } else {
